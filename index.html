@@ -26,7 +26,7 @@
       <div class="row">
         <div class="col-md-12">
             <div class="nick-desc">
-              <h1>Nick Weidner Testing</h1>
+              <h1>ACM SIGGRAPH Coference Map and Calendar</h1>
             </div>
         </div>
       </div>
@@ -38,6 +38,18 @@
         </div>
       </div>
 
+      
+      <div id="observablehq-map-e48b3416"></div>
+<p>Credit: <a href="https://observablehq.com/d/0e46180bba1ec0c3">SIGGRAPH Conference Location Map by Paul Kry</a></p>
+
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
+import define from "https://api.observablehq.com/d/0e46180bba1ec0c3.js?v=3";
+new Runtime().module(define, name => {
+  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-e48b3416"));
+});
+</script>
+      
     </div>
 
     <!-- Optional JavaScript -->
