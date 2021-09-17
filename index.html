@@ -1,5 +1,6 @@
 <!doctype html>
 <meta charset="utf-8">
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
    crossorigin=""/>
@@ -28,32 +29,27 @@ a:link:not(:hover) {
 
 <h1>ACM SIGGRAPH Conferences Map and Calendar</h1>
 
-<div id="observablehq-map-6a27067f"></div>
-<div id="observablehq-viewof-viewyear-6a27067f"></div>
-<div id="observablehq-viewof-viewyearLow-6a27067f"></div>
-<!--<p>Credit: <a href="https://observablehq.com/d/0e46180bba1ec0c3">SIGGRAPH Conference Location Map by Paul Kry</a></p>-->
+<div class="container">
+
+<div id="observablehq-dd_banner-f5d16f8f"></div>
+<div id="observablehq-appSelect-f5d16f8f"></div>
+<div id="observablehq-confTypesSelect-15b72602"></div>
+<div id="observablehq-viewof-whichyears-737baec2"></div>
+<div id="observablehq-mulcalendar-15b72602"></div>
+<div id="observablehq-buttonstyle-15b72602"></div>
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/0e46180bba1ec0c3.js?v=3";
+import define from "https://api.observablehq.com/d/d4e7de8abfc41e55.js?v=3";
 new Runtime().module(define, name => {
-  if (name === "map") return new Inspector(document.querySelector("#observablehq-map-6a27067f"));
-  if (name === "viewof viewyear") return new Inspector(document.querySelector("#observablehq-viewof-viewyear-6a27067f"));
-  if (name === "viewof viewyearLow") return new Inspector(document.querySelector("#observablehq-viewof-viewyearLow-6a27067f"));
+  if (name === "confTypesSelect") return new Inspector(document.querySelector("#observablehq-confTypesSelect-15b72602"));
+  if (name === "mulcalendar") return new Inspector(document.querySelector("#observablehq-mulcalendar-15b72602"));
+  if (name === "appSelect") return new Inspector(document.querySelector("#observablehq-appSelect-f5d16f8f"));
+  if (name === "dd_banner") return new Inspector(document.querySelector("#observablehq-dd_banner-f5d16f8f"));
+  if (name === "buttonstyle") return new Inspector(document.querySelector("#observablehq-buttonstyle-15b72602"));
+  if (name === "viewof whichyears") return new Inspector(document.querySelector("#observablehq-viewof-whichyears-737baec2"));
+  return ["multooltip"].includes(name);
 });
 </script>
 
-            
-<div id="observablehq-chart-4687e32e"></div>
-<div id="observablehq-viewof-viewyear-4687e32e"></div>
-<!--<p>Credit: <a href="https://observablehq.com/d/378c39ece70bd768">Conference Calendar by Paul Kry</a></p> -->
-
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@4/dist/runtime.js";
-import define from "https://api.observablehq.com/d/378c39ece70bd768.js?v=3";
-new Runtime().module(define, name => {
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-4687e32e"));
-  if (name === "viewof viewyear") return new Inspector(document.querySelector("#observablehq-viewof-viewyear-4687e32e"));
-  return ["tooltip"].includes(name);
-});
-</script>
+</div>
