@@ -31,6 +31,7 @@ a:link:not(:hover) {
 
 <div class="container">
 
+<div id="observablehq-appmap-805dc555"></div>
 <div id="observablehq-dd_banner-f5d16f8f"></div>
 <div id="observablehq-appSelect-f5d16f8f"></div>
 <div id="observablehq-confTypesSelect-15b72602"></div>
@@ -48,6 +49,7 @@ new Runtime().module(define, name => {
   if (name === "dd_banner") return new Inspector(document.querySelector("#observablehq-dd_banner-f5d16f8f"));
   if (name === "buttonstyle") return new Inspector(document.querySelector("#observablehq-buttonstyle-15b72602"));
   if (name === "viewof whichyears") return new Inspector(document.querySelector("#observablehq-viewof-whichyears-737baec2"));
+  if (name === "appmap") return new Inspector(document.querySelector("#observablehq-appmap-805dc555"));
   return ["multooltip"].includes(name);
 });
 </script>
